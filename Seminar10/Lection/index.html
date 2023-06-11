@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // const product = {
+        // 	name: 'Audi',
+        // 	productprice: 2000
+        // }
+        // console.log(product);
+        // 
+        // const product = {
+        //     name: 'Audi',
+        //     price: 2000
+        // }
+        // let productSale = product;
+        // console.log(productSale);
+        // productSale.price = 1500;
+        // console.log('Это скидка' + productSale);
+        // console.log(product);
+        // 
+        // const product = {
+        //     name: 'Audi',
+        //     price: 2000
+        // }
+        // let productSale = product;
+        // productSale.price = 1500;
+        // console.log(productSale);
+        // console.log(product);
+        // 
+        // const product = {
+        //     name: 'Audi',
+        //     price: 2000
+        // }
+        // let productSale = product;
+        // productSale.price = 1500;
+        // let productNew = product;
+        // productNew.text = 'lorem';
+
+        // console.log(productSale);
+        // console.log(product);
+        // console.log(productNew);
+        // 
+        // Если count=0, то товар нельзя купить
+        // const product = {
+        //     name: 'Audi',
+        //     price: 2000,
+        //     count: 0,
+        //     buy: function() {
+        //         if (product.count > 0) {
+        //             console.log('Вы купили данный товар');
+        //         } else {
+        //             console.log('Товар закончился');
+        //         }
+        //     }
+        // }
+        // product.buy();
+        // 
+        const product = {
+            name: 'Audi',
+            price: 2000,
+            count: 0,
+            userRegistred: false,
+            reg: function() {
+                this.userRegistred = true
+            },
+            countProduct: function() {
+                if (this.count > 0) {
+                    console.log('Вы можете данный товар');
+                } else {
+                    console.log('Товар закончился, нельзя добавить в корзину');
+                }
+            },
+            buyProduct: function() {
+                if (this.userRegistred) {
+                    console.log('Товар в корзине');
+                } else {
+                    console.log('Зарегистрируйся, сначала выполни product.reg()');
+                }
+            }
+        }
+        product.buyProduct();
+        product.reg();
+        product.buyProduct();
+    </script>
+
+</body>
+
+</html>
